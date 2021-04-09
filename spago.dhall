@@ -1,5 +1,15 @@
 { name = "halogen-project"
-, dependencies = [ "console", "effect", "halogen", "psci-support" ]
+, dependencies =
+  [ "arrays"
+  , "console"
+  , "effect"
+  , "halogen"
+  , "maybe"
+  , "prelude"
+  , "psci-support"
+  , "routing-duplex"
+  , "typelevel-prelude"
+  ]
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs", "test/**/*.purs" ]
 }
