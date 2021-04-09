@@ -1,8 +1,10 @@
 { name = "halogen-project"
 , dependencies =
-  [ "arrays"
+  [ "aff"
+  , "arrays"
   , "console"
   , "effect"
+  , "either"
   , "halogen"
   , "maybe"
   , "prelude"
@@ -12,6 +14,7 @@
   , "simple-json"
   , "transformers"
   , "typelevel-prelude"
+  , "web-html"
   ]
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs", "test/**/*.purs" ]

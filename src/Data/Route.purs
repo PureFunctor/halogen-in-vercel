@@ -1,14 +1,15 @@
 module Site.Data.Route where
 
-import Prelude
+import Prelude hiding ((/))
 
 import Data.Generic.Rep (class Generic)
 import Routing.Duplex (RouteDuplex', root)
 import Routing.Duplex.Generic (noArgs, sum)
+import Routing.Duplex.Generic.Syntax ((/))
 
 
 -- | Data type representing routes for the application.
-data Route = IndexR
+data Route = IndexR | AboutR
 
 derive instance genericRoute :: Generic Route _
 derive instance eqRoute :: Eq Route
@@ -18,4 +19,5 @@ derive instance eqRoute :: Eq Route
 routeCodec :: RouteDuplex' Route
 routeCodec = root $ sum
   { "IndexR" : noArgs
+  , "AboutR" : "about" / noArgs
   }

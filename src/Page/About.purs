@@ -1,4 +1,4 @@
-module Site.Page.Index where
+module Site.Page.About where
 
 import Prelude
 
@@ -34,9 +34,9 @@ initialState _ = unit
 render :: forall state w. state -> HH.HTML w Action
 render _ =
   HH.div [ ]
-  [ HH.text "Index Page"
-  , HH.button [ HE.onClick \_ -> NavigateTo AboutR ]
-    [ HH.text "Go to About."
+  [ HH.text "About Page"
+  , HH.button [ HE.onClick \_ -> NavigateTo IndexR ]
+    [ HH.text "Go to Index."
     ]
   ]
 

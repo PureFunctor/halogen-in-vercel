@@ -34,7 +34,7 @@ main = HA.runHalogenAff do
     window >>= Window.location >>= Location.pathname
       <#> fromMaybe Route.IndexR <<< hush <<< parse routeCodec
 
-  halogenIO <- runUI Router.component Route.IndexR body
+  halogenIO <- runUI rootComponent route body
 
   void $ liftEffect $ pushInterface.listen \location ->
     case hush $ parse routeCodec $ location.pathname of
