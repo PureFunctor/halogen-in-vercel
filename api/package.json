@@ -1,6 +1,6 @@
 {
   "private": true,
   "scripts": {
-    "vercel-build": "yarn --cwd .. && yarn --cwd .. build -u '-o api/output' && node ../build.js"
+    "vercel-build": "yarn --cwd .. && yarn --cwd .. build -u '-o api/output'"
   }
 }
