@@ -5,6 +5,7 @@
   , "console"
   , "effect"
   , "either"
+  , "express"
   , "halogen"
   , "maybe"
   , "prelude"
